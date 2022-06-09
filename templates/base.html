@@ -1,0 +1,41 @@
+{% load static %}
+{% load sass_tags %}
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>동의대학교 챗봇 Choa</title>
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'custom/deuLogo.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'custom/deuLogo.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'custom/deuLogo.png' %}">
+    <link rel="shortcut icon" href="{% static 'custom/deuLogo.png' %}">
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- css File -->
+    <link rel="stylesheet" type="text/css" href="{% static 'custom/animation.css' %}">
+
+    <!-- scss File -->
+    <link href="{% static 'scss/app.css' %}" rel="stylesheet" type="text/css" />
+
+    <!-- Javascript Files -->
+    <script src="{% static 'assets/vendors/jquery/jquery-3.5.0.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/bootstrap.bundle.min.js' %}"></script>
+    <!-- <script src="{% static 'assets/js/app.js' %}"></script> -->
+</head>
+
+<body class="chats-tab-open">
+    <!-- 상속 받는 템플릿 start-->
+    {% block content %}
+    {% endblock %}
+    <!-- 상속 받는 템플릿 end-->
+</body>
+</html>

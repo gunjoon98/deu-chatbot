@@ -1,0 +1,248 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+{% block content %}
+
+<!-- Main Layout Start -->
+<div class="main-layout">
+        
+    <!-- 사이드 바 Start -->
+    <aside class="sidebar">
+        <!-- Tab Content Start -->
+        <div class="tab-content">
+            <!-- Chat Tab Content Start -->
+            <div class="tab-pane active" id="chats-content">
+                <div class="d-flex flex-column h-100">
+                    <div class="hide-scrollbar h-100" id="chatContactsList">
+                        
+                        <!-- Chat Header Start -->
+                        <div class="sidebar-header sticky-top p-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Chat Tab Pane Title Start -->
+                                <a class="d-none d-xl-block rounded p-1" href="{% url 'index' %}">
+                                    <img src = "{% static 'custom/deuLogo.png' %}" alt="Deu" height="40" width="40">
+                                </a>
+                                <h5 class="font-weight-semibold mb-0" style="padding-bottom:5px; padding-top:6px; padding-right:100px; font-size: 1.3rem;">자주 질문하는 정보</h5>
+                                <!-- Chat Tab Pane Title End -->
+                            </div>
+                        </div>
+                        
+                        <!-- Chat Header End -->
+
+                        <!-- Chat Contact List Start -->
+                        <ul class="contacts-list" id="chatContactTab" data-chat-list="">
+
+                            <!-- 학식 메뉴 Chat Item Start -->
+                            <li class="contacts-item friends">
+                                <a class="contacts-link" href="javascript:list_click('학식 메뉴');">
+                                    <div class="avatar avatar-online">
+                                        <img src="{% static 'custom/questionlist/menu.png' %}" alt="">
+                                    </div>
+                                    <div class="contacts-content">
+                                        <div class="contacts-info">
+                                            <h6 class="chat-name text-truncate" style="padding-top:5px; font-size:1.3rem;">학식 메뉴</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- Chat Item End -->
+
+                            <!-- 학사 일정 Chat Item Start -->
+                            <li class="contacts-item friends">
+                                <a class="contacts-link" href="javascript:list_click('학사 일정');">
+                                    <div class="avatar avatar-online">
+                                        <img src="{% static 'custom/questionlist/calendar.png' %}" alt="">
+                                    </div>
+                                    <div class="contacts-content">
+                                        <div class="contacts-info">
+                                            <h6 class="chat-name text-truncate" style="padding-top:5px; font-size:1.3rem;">학사 일정</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- Chat Item End -->
+
+                            <!-- 장학금 Chat Item Start -->
+                            <li class="contacts-item friends">
+                                <a class="contacts-link" href="javascript:list_click('장학금');">
+                                    <div class="avatar avatar-online">
+                                        <img src="{% static 'custom/questionlist/fund.png' %}" alt="">
+                                    </div>
+                                    <div class="contacts-content">
+                                        <div class="contacts-info">
+                                            <h6 class="chat-name text-truncate" style="padding-top:5px; font-size:1.3rem;">장학금</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- Chat Item End -->
+
+                            <!-- 수강 신청 Chat Item Start -->
+                            <li class="contacts-item friends">
+                                <a class="contacts-link" href="javascript:list_click('수강 신청');">
+                                    <div class="avatar avatar-online">
+                                        <img src="{% static 'custom/questionlist/class_applicant.png' %}" alt="">
+                                    </div>
+                                    <div class="contacts-content">
+                                        <div class="contacts-info">
+                                            <h6 class="chat-name text-truncate" style="padding-top:5px; font-size:1.3rem;">수강 신청</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- Chat Item End -->
+
+                            <!-- 시험 일정 Chat Item Start -->
+                            <li class="contacts-item friends">
+                                <a class="contacts-link" href="javascript:list_click('시험 일정');">
+                                    <div class="avatar avatar-online">
+                                        <img src="{% static 'custom/questionlist/exam_canlendar.png' %}" alt="">
+                                    </div>
+                                    <div class="contacts-content">
+                                        <div class="contacts-info">
+                                            <h6 class="chat-name text-truncate" style="padding-top:5px; font-size:1.3rem;">시험 일정</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- Chat Item End -->
+
+                             <!-- 도서관 Chat Item Start -->
+                             <li class="contacts-item friends">
+                                <a class="contacts-link" href="javascript:list_click('도서관');">
+                                    <div class="avatar avatar-online">
+                                        <img src="{% static 'custom/questionlist/books.png' %}" alt="">
+                                    </div>
+                                    <div class="contacts-content">
+                                        <div class="contacts-info">
+                                            <h6 class="chat-name text-truncate" style="padding-top:5px; font-size:1.3rem;">도서관</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- Chat Item End -->
+
+                            <!-- 날씨 Chat Item Start -->
+                            <li class="contacts-item friends">
+                                <a class="contacts-link" href="javascript:list_click('날씨');">
+                                    <div class="avatar avatar-online">
+                                        <img src="{% static 'custom/questionlist/weather.png' %}" alt="">
+                                    </div>
+                                    <div class="contacts-content">
+                                        <div class="contacts-info">
+                                            <h6 class="chat-name text-truncate" style="padding-top:5px; font-size:1.3rem;">날씨</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- Chat Item End -->
+
+                            <!-- 편의시설 Chat Item Start -->
+                            <li class="contacts-item friends">
+                                <a class="contacts-link" href="javascript:list_click('편의시설');">
+                                    <div class="avatar avatar-online">
+                                        <img src="{% static 'custom/questionlist/shop.png' %}" alt="">
+                                    </div>
+                                    <div class="contacts-content">
+                                        <div class="contacts-info">
+                                            <h6 class="chat-name text-truncate" style="padding-top:5px; font-size:1.3rem;">편의시설</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- Chat Item End -->
+
+                            <!-- 휴학/복학 Chat Item Start -->
+                            <li class="contacts-item friends">
+                                <a class="contacts-link" href="javascript:list_click('휴학/복학');">
+                                    <div class="avatar avatar-online">
+                                        <img src="{% static 'custom/questionlist/bye.png' %}" alt="">
+                                    </div>
+                                    <div class="contacts-content">
+                                        <div class="contacts-info">
+                                            <h6 class="chat-name text-truncate" style="padding-top:5px; font-size:1.3rem;">휴학/복학</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- Chat Item End -->
+
+                            <!-- 캠퍼스맵 Chat Item Start -->
+                            <li class="contacts-item friends">
+                                <a class="contacts-link" href="javascript:list_click('캠퍼스맵');">
+                                    <div class="avatar avatar-online">
+                                        <img src="{% static 'custom/questionlist/maps.png' %}" alt="">
+                                    </div>
+                                    <div class="contacts-content">
+                                        <div class="contacts-info">
+                                            <h6 class="chat-name text-truncate" style="padding-top:5px; font-size:1.3rem;">캠퍼스맵</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- Chat Item End -->
+
+                        </ul>
+                        <!-- Chat Contact List End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Chats Tab Content End -->
+        </div>
+        <!-- Tab Content End -->
+    </aside>
+    <!-- 사이드 바 End -->
+
+
+
+    <!-- Main Start -->
+    <main class="main main-visible">
+
+        <!-- Chats Page Start -->
+        <div class="chats">
+            <div class="chat-body">
+
+                <!-- Chat Content Start-->
+                <div class="chat-content p-2" id="messageBody">
+                    <div class="container">
+                    </div>
+
+                    <!-- Scroll to finish -->
+                    <div class="chat-finished" id="chat-finished"></div>
+                </div>
+                <!-- Chat Content End-->
+
+                <!-- Chat Footer Start-->
+                <div class="chat-footer">
+                    <div class="attachment">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary btn-icon btn-minimal btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg class="hw-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <!-- <img class="injectable hw-20" src="./../assets/media/heroicons/outline/plus-circle.svg" alt=""> -->
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <textarea class="form-control emojionearea-form-control" id="messageInput" rows="1" placeholder="Type your message here..."></textarea>
+                    <div class="btn btn-primary btn-icon send-icon rounded-circle text-light mb-1" id="messageButten" role="button" onclick="">
+                        <svg class="hw-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                        <!-- <img src="./../assets/media/heroicons/outline/arrow-right.svg" alt="" class="injectable"> -->
+                    </div>
+                </div>
+                <!-- Chat Footer End-->
+            </div>
+        </div>
+        <!-- Chats Page End -->
+    </main>
+    <!-- Main End -->
+</div>
+<!-- Main Layout End -->
+
+
+
+<script src="{% static 'custom/chatUX.js' %}"></script>
+{% endblock %}
