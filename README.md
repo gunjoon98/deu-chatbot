@@ -4,6 +4,16 @@
 ## Domain
 http://deubot.com (현재 닫혀 있음)
 
+## view
+![그림1](https://github.com/gunjoon98/deu-chatbot/assets/48176143/fb96d74b-a4ba-4b2a-b719-baf17520d0be)
+
+
+![Untitled1](https://github.com/gunjoon98/deu-chatbot/assets/48176143/1bb8a4a4-f79f-4921-bf8c-e597b521011a)
+
+
+![Untitled](https://github.com/gunjoon98/deu-chatbot/assets/48176143/b6bbf291-6e01-4f0a-a2fc-e3ac02f9bb79)
+
+
 ## Menu
 챗봇 초아는 웹을 통해 서비스를 제공합니다. 아래 10개의 주제에 대한 답변을 지원합니다.
 
